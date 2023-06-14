@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jovian Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+      #banner {
+        height:360px;
+        width:100%;
+        
+      }
+    </style>
+   </head>
+  <body>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">Jovian careers</h1>
+    <img class="ing-fluid" id="banner" src="/static/banner.jpg" alt="">
+    <h2 class="text-center mt-2 mb-2">About jovian</h2>
+    <p class="lead mt-2 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue fringilla mauris, eget laoreet nulla consectetur eu. Aenean bibendum sollicitudin urna, non pulvinar libero. Proin et sem nec turpis sodales posuere. In eu finibus odio. Proin iaculis non ipsum vitae varius. Morbi et diam mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer felis leo, fermentum elementum ipsum quis, finibus sodales nunc. Pellentesque dolor odio, aliquet vitae tortor in, posuere imperdiet est. Sed sed neque mi. Curabitur tincidunt, purus egestas malesuada ultrices, nunc justo viverra dolor, ac pellentesque sem orci eu odio. Suspendisse est ligula, luctus vel malesuada placerat, viverra nec metus. Praesent aliquet feugiat lectus ac consectetur.</p>
+    <h2 class="text-center mt-2 mb-2">Open positions</h2>
+    <div class="lead">
+      {%for job in jobs %}
+        {% include 'jobitem.html' %}
+      {%endfor%}
+    </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-large">Contact Us</button>
+        <p class="mt-4" >Copyright 2023, Jovian</p>
+      </div>
+      
+    </div>
+  </body>
+</html>
