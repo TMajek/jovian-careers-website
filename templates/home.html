@@ -9,16 +9,23 @@
       #banner {
         height:360px;
         width:100%;
-        
+        margin-bottom:16px;
       }
     </style>
    </head>
   <body>
+    {% include 'nav.html'%}
+    <img class="ing-fluid" id="banner" src="/static/banner.jpg" alt="">
     <div class="container">
     <h1 class="text-center mt-2 mb-4">Jovian careers</h1>
-    <img class="ing-fluid" id="banner" src="/static/banner.jpg" alt="">
-    <h2 class="text-center mt-2 mb-2">About jovian</h2>
-    <p class="lead mt-2 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue fringilla mauris, eget laoreet nulla consectetur eu. Aenean bibendum sollicitudin urna, non pulvinar libero. Proin et sem nec turpis sodales posuere. In eu finibus odio. Proin iaculis non ipsum vitae varius. Morbi et diam mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer felis leo, fermentum elementum ipsum quis, finibus sodales nunc. Pellentesque dolor odio, aliquet vitae tortor in, posuere imperdiet est. Sed sed neque mi. Curabitur tincidunt, purus egestas malesuada ultrices, nunc justo viverra dolor, ac pellentesque sem orci eu odio. Suspendisse est ligula, luctus vel malesuada placerat, viverra nec metus. Praesent aliquet feugiat lectus ac consectetur.</p>
+    <div class="row" style="margin-bottom:16px">
+      <div class="col-md-6">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue fringilla mauris, eget laoreet nulla consectetur eu. Aenean bibendum sollicitudin urna, non pulvinar libero. Proin et sem nec turpis sodales posuere. In eu finibus odio. Proin iaculis non ipsum vitae varius. Morbi et diam mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer felis leo, fermentum elementum ipsum quis, finibus sodales nunc. Pellentesque dolor odio, aliquet vitae tortor in, posuere imperdiet est. Sed sed neque mi. Curabitur tincidunt, purus egestas malesuada ultrices, nunc justo viverra dolor, ac pellentesque sem orci eu odio. Suspendisse est ligula, luctus vel malesuada placerat, viverra nec metus. Praesent aliquet feugiat lectus ac consectetur.</p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img src="/static/people.jpg" style="height:320px; border-radius:4px;" alt="">
+        </div>
+    </div>
     <h2 class="text-center mt-2 mb-2">Open positions</h2>
     <div class="lead">
       {%for job in jobs %}
@@ -27,9 +34,9 @@
     </div>
       <div class="text-center">
         <button class="btn btn-primary btn-large">Contact Us</button>
-        <p class="mt-4" >Copyright 2023, Jovian</p>
       </div>
       
     </div>
+     {% include 'footer.html'%}
   </body>
 </html>
